@@ -1,0 +1,93 @@
+<html>
+    <head>
+        <script src="/socket.io/socket.io.js"></script>
+    </head>
+    <body>
+    <script>
+        const socket=io.connect();
+    /*     socket.on('userConnected', (message) => {
+        const notification = document.createElement('div');
+        notification.innerText = message;
+        document.body.appendChild(notification);
+      });
+
+      socket.on('msg', (data) => {
+        const message = document.createElement('p');
+        message.innerText = data;
+        document.getElementById('messages').appendChild(message);
+      });
+
+      function sendMessage() {
+        const input = document.getElementById('messageInput');
+        socket.emit('msg', input.value);
+        input.value = '';
+      } */
+       /* socket.on('userDisconnected', (message) => {
+        const notification = document.createElement('div');
+        notification.innerText = message;
+        document.body.appendChild(notification);
+      });
+
+      function sendMessage() {
+        const input = document.getElementById('messageInput');
+        socket.emit('msg', input.value);
+        input.value = '';
+      } */
+       /* const messageInput = document.getElementById('messageInput');
+
+      socket.on('userConnected', (message) => {
+        const notification = document.createElement('div');
+        notification.innerText = message;
+        document.body.appendChild(notification);
+      });
+
+      socket.on('msg', (data) => {
+        const message = document.createElement('p');
+        message.innerText = data;
+        document.getElementById('messages').appendChild(message);
+      });
+
+      socket.on('userTyping', (message) => {
+        const notification = document.createElement('div');
+        notification.id = 'typingNotification';
+        notification.innerText = message;
+        document.body.appendChild(notification);
+      });
+
+      socket.on('userStopTyping', () => {
+        const notification = document.getElementById('typingNotification');
+        if (notification) {
+          notification.remove();
+        }
+      });
+
+      messageInput.onkeyup = function () {
+        if (messageInput.value) {
+          socket.emit('typing');
+        } else {
+          socket.emit('stopTyping');
+        }
+      };
+
+      function sendMessage() {
+        socket.emit('msg', messageInput.value);
+        messageInput.value = '';
+      }
+    </script>
+    <input type="text" id="messageInput" />
+    <button onclick="sendMessage()">Send</button> */
+    socket.on("msg",(data)=>{
+        p=document.createElement("p")
+        p.innerText=(data)
+        document.body.append(p)
+    })
+    function send() {
+        socket.emit("msg",x.value)
+        
+    }
+    </script>
+    
+
+    </body>
+
+</html>
